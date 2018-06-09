@@ -15,6 +15,7 @@
 		357CDFC520CBC891009DA619 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357CDFC420CBC891009DA619 /* DetailViewController.swift */; };
 		357CDFC720CBC97E009DA619 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357CDFC620CBC97E009DA619 /* Interactor.swift */; };
 		357CDFC920CBC99E009DA619 /* PresentAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357CDFC820CBC99E009DA619 /* PresentAnimation.swift */; };
+		357CDFCB20CBDBB6009DA619 /* PopAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357CDFCA20CBDBB6009DA619 /* PopAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		357CDFC420CBC891009DA619 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		357CDFC620CBC97E009DA619 /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
 		357CDFC820CBC99E009DA619 /* PresentAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentAnimation.swift; sourceTree = "<group>"; };
+		357CDFCA20CBDBB6009DA619 /* PopAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				357CDFB420CBC75F009DA619 /* ViewController.swift */,
 				357CDFC620CBC97E009DA619 /* Interactor.swift */,
 				357CDFC820CBC99E009DA619 /* PresentAnimation.swift */,
+				357CDFCA20CBDBB6009DA619 /* PopAnimation.swift */,
 				357CDFC420CBC891009DA619 /* DetailViewController.swift */,
 				357CDFB620CBC75F009DA619 /* Main.storyboard */,
 				357CDFB920CBC762009DA619 /* Assets.xcassets */,
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				357CDFCB20CBDBB6009DA619 /* PopAnimation.swift in Sources */,
 				357CDFC520CBC891009DA619 /* DetailViewController.swift in Sources */,
 				357CDFB520CBC75F009DA619 /* ViewController.swift in Sources */,
 				357CDFC920CBC99E009DA619 /* PresentAnimation.swift in Sources */,

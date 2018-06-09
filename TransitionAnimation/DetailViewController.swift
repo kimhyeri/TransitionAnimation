@@ -15,7 +15,45 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(self.handlePanGesture(_:)))
+        
+        self.view.addGestureRecognizer(panGesture)
     }
 
+    @objc func handlePanGesture(_ sender: UIScreenEdgePanGestureRecognizer){
+        let location = sender.translation(in: view)
+        let progress = location.y / self.view.frame.height
+        
+        switch sender.state {
+        case .began:
+            print("began")
+            interactor?.hasStarted = true
+            let nextVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "First") as! ViewController
+            nextVC.interactor = self.interactor!
+            nextVC.transitioningDelegate = nextVC
+            self.present(nextVC, animated: true, completion: nil)
+        case .changed:
+            print("changed")
+            interactor?.shoudFinish = progress > 0.5
+            interactor?.update(progress)
+        case .cancelled:
+            print("cancelled")
+            interactor?.hasStarted = false
+        case .ended:
+            interactor?.hasStarted = false
+            (interactor?.shoudFinish)! ? interactor?.finish() : interactor?.cancel()
+        default:
+            print("default")
+        }
+    }
+}
 
+extension ViewController: UIViewControllerTransitioningDelegate {
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return PopAnimation()
+    }
+    
+    func interactionControllerForPresentation(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        return interactor.hasStarted == true ? interactor : nil
+    }
 }

@@ -40,7 +40,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         case .cancelled:
             print("cancelled")
             interactor.hasStarted = false
-        case . ended:
+        case .ended:
             interactor.hasStarted = false
             interactor.shoudFinish ? interactor.finish() : interactor.cancel()
         default:
