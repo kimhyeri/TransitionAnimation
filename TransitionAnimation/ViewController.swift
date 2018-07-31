@@ -24,7 +24,6 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     @objc func handlePanGesture(_ sender: UIScreenEdgePanGestureRecognizer){
         let location = sender.translation(in: view)
         let progress = location.x / self.view.frame.width
-        
         switch sender.state {
         case .began:
             print("began")
@@ -46,6 +45,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         default:
             print("default")
         }
+        
     }
 }
 
