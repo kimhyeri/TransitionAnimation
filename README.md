@@ -45,6 +45,8 @@ extension DetailViewController: UIViewControllerTransitioningDelegate {
 ```
 
 
-### Screen Gif
-![텍스트목록](./gif/transition.gif)
-![텍스트목록](./gif/transition1.gif)
+### left to right 📸
+![텍스트목록](./gif/ani1.gif)
+
+### top to bottom 📸
+![텍스트목록](./gif/ani2.gif)
